@@ -1,0 +1,21 @@
+{
+  "name": "secret-santa",
+  "version": "1.0.0",
+  "description": "Aplicación de Intercambio Secreto con Node.js y Netlify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "secret-santa",
+    "intercambio-secreto",
+    "netlify",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@netlify/blobs": "^7.0.0",
+    "uuid": "^9.0.1"
+  }
+}

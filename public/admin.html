@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Intercambio Secreto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>🎅 Intercambio Secreto - Admin</h1>
+            <button id="logoutBtn" class="btn btn-secondary">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="admin-panel">
+            <div class="section">
+                <h2>Crear Nuevo Juego</h2>
+                <form id="createGameForm">
+                    <div class="form-group">
+                        <label for="gameName">Nombre del Juego</label>
+                        <input type="text" id="gameName" placeholder="Ej: Navidad 2025" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crear Juego</button>
+                </form>
+            </div>
+
+            <div class="section">
+                <h2>Juegos Creados</h2>
+                <div id="gamesList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para agregar participantes -->
+    <div id="participantModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Gestionar Participantes</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <h4 id="modalGameName"></h4>
+
+                <form id="addParticipantForm">
+                    <div class="form-group">
+                        <label for="participantName">Nombre del Participante</label>
+                        <input type="text" id="participantName" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Agregar Participante</button>
+                </form>
+
+                <div class="participants-list">
+                    <h5>Participantes Agregados:</h5>
+                    <ul id="participantsList"></ul>
+                </div>
+
+                <div class="modal-actions">
+                    <button id="finalizeGameBtn" class="btn btn-success">Finalizar y Generar Enlaces</button>
+                </div>
+
+                <div id="generatedLinks" style="display: none;">
+                    <h5>Enlaces Generados:</h5>
+                    <div id="linksList"></div>
+                    <button id="exportCsvBtn" class="btn btn-secondary">Exportar CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

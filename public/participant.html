@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Intercambio Secreto</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="participant-box">
+            <div id="loadingMessage">
+                <div class="logo">🎅</div>
+                <h2>Cargando...</h2>
+            </div>
+
+            <div id="errorMessage" style="display: none;">
+                <div class="logo">❌</div>
+                <h2>Enlace Inválido</h2>
+                <p>Este enlace no es válido o ha expirado.</p>
+            </div>
+
+            <div id="assignmentMessage" style="display: none;">
+                <div class="logo">🎄🎁</div>
+                <h2>¡Hola <span id="participantName"></span>!</h2>
+                <div class="assignment-card">
+                    <p class="assignment-label">Tu Intercambio Secreto es para:</p>
+                    <h1 class="assigned-name" id="assignedName"></h1>
+                </div>
+                <div class="instructions">
+                    <p>🤫 Recuerda mantenerlo en secreto</p>
+                    <p>🎁 ¡Prepara un regalo especial!</p>
+                </div>
+            </div>
+
+            <div id="notFinalizedMessage" style="display: none;">
+                <div class="logo">⏳</div>
+                <h2>Aún no está listo</h2>
+                <p>El organizador todavía no ha finalizado los emparejamientos.</p>
+                <p>Vuelve a revisar este enlace más tarde.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/participant.js"></script>
+</body>
+</html>

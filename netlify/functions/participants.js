@@ -6,7 +6,7 @@ function isAuthenticated(event) {
     return authHeader && authHeader.length > 0;
 }
 
-exports.handler = async (event) => {
+exports.handler = async (event, context) => {
     const headers = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',

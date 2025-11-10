@@ -15,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@netlify/blobs": "^7.0.0",
-    "uuid": "^9.0.1"
+    "@netlify/blobs": "^8.1.0",
+    "uuid": "^10.0.0"
   }
 }

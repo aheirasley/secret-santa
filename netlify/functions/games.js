@@ -111,12 +111,15 @@ exports.handler = async (event, context) => {
 
     } catch (error) {
         console.error('Games error:', error);
+        console.error('Error stack:', error.stack);
+        console.error('Error message:', error.message);
         return {
             statusCode: 500,
             headers,
             body: JSON.stringify({
                 success: false,
-                error: 'Error del servidor'
+                error: 'Error del servidor',
+                details: process.env.NODE_ENV === 'development' ? error.message : undefined
             })
         };
     }

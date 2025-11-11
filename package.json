@@ -16,6 +16,6 @@
   "license": "MIT",
   "dependencies": {
     "uuid": "^10.0.0",
-    "node-fetch": "^2.7.0"
+    "@netlify/data-stores-sdk": "^0.2.0"
   }
 }
